@@ -8,6 +8,9 @@ import { CrearFuncinario } from './crear-funcinario/crear-funcinario';
 import { Ingreso } from './ingreso/ingreso';
 import { CrearIngreso } from './crear-ingreso/crear-ingreso';
 import { EditarIngreso } from './editar-ingreso/editar-ingreso';
+import { Bitacora } from './bitacora/bitacora';
+import { EditarBitacora } from './editar-bitacora/editar-bitacora';
+import { CrearBitacora } from './crear-bitacora/crear-bitacora';
 
 
 export const routes: Routes = [
@@ -26,7 +29,9 @@ export const routes: Routes = [
 {path:'editar-ingreso', component:EditarIngreso},
 
 
-
+{path:'bitacora', component:Bitacora},
+{path:'editar-bitacora', component:EditarBitacora},
+{path:'crear-bitacora', component:CrearBitacora},
 
 
 
