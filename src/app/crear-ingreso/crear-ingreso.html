@@ -1,1 +1,47 @@
-<p>crear-ingreso works!</p>
+<label>Id Ingreso</label>
+<input
+type="text"
+[(ngModel)]="nuevoIngreso.id_ingreso"
+name="id_ingreso">
+
+<br><br>
+
+<label>Usuario</label>
+
+<select
+[(ngModel)]="nuevoIngreso.id_usuario"
+name="id_usuario">
+
+<option
+*ngFor="let u of usuarios"
+[value]="u.id_usuario">
+
+{{u.id_usuario}}
+
+</option>
+
+</select>
+
+<br><br>
+
+<label>Bitácora</label>
+
+<select
+[(ngModel)]="nuevoIngreso.id_bitacora"
+name="id_bitacora">
+
+<option
+*ngFor="let b of bitacoras"
+[value]="b.id_bitacora">
+
+{{b.id_bitacora}}
+
+</option>
+
+</select>
+
+<br><br>
+
+<button (click)="guardarIngreso()">
+Guardar
+</button>
