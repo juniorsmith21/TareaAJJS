@@ -1,1 +1,18 @@
-<p>crear-funcinario works!</p>
+<h1>CREAR FUNCIONARIO</h1>
+<form (ngSubmit)="guardarFuncionario()" >
+    <input placeholder="Escribe id " name="id" [(ngModel)]="nuevoFuncionario.id_funcionario">
+    <input placeholder="Escribe tu identificacion" name="ident" [(ngModel)]="nuevoFuncionario.ci">
+    <input placeholder="Escribe tu apellido" name="ape" [(ngModel)]="nuevoFuncionario.apellidos">
+    <input placeholder="Escribe tu nombre" name="nom" [(ngModel)]="nuevoFuncionario.nombres">
+    <input placeholder="Tipo de funcionario" name="funcio" [(ngModel)]="nuevoFuncionario.tipo_funcionario">
+    <input placeholder="Escribe tu telefono" name="tel" [(ngModel)]="nuevoFuncionario.telefono">
+    <input placeholder="Escribe tu correo " name="corr" [(ngModel)]="nuevoFuncionario.correo">
+    <input placeholder="Escribe tu direccion " name="dir" [(ngModel)]="nuevoFuncionario.direccion">
+    <input placeholder="Escribe tu sexo" name="sex" [(ngModel)]="nuevoFuncionario.sexo">
+
+    <button>Guardar</button>
+
+
+
+
+</form>
