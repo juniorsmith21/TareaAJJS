@@ -1,8 +1,24 @@
-<label>Id Ingreso</label>
+<label>Fecha ingreso</label>
+<input
+type="datetime-local"
+[(ngModel)]="nuevoIngreso.fecha_ingreso"
+name="fecha_ingreso">
+
+<br><br>
+
+<label>Fecha salida</label>
+<input
+type="datetime-local"
+[(ngModel)]="nuevoIngreso.fecha_salida"
+name="fecha_salida">
+
+<br><br>
+
+<label>Estado</label>
 <input
 type="text"
-[(ngModel)]="nuevoIngreso.id_ingreso"
-name="id_ingreso">
+[(ngModel)]="nuevoIngreso.estado"
+name="estado">
 
 <br><br>
 
@@ -12,31 +28,13 @@ name="id_ingreso">
 [(ngModel)]="nuevoIngreso.id_usuario"
 name="id_usuario">
 
-<option
-*ngFor="let u of usuarios"
-[value]="u.id_usuario">
+  <option
+  *ngFor="let u of usuarios"
+  [value]="u.id_usuario">
 
-{{u.id_usuario}}
+    {{u.id_usuario}}
 
-</option>
-
-</select>
-
-<br><br>
-
-<label>Bitácora</label>
-
-<select
-[(ngModel)]="nuevoIngreso.id_bitacora"
-name="id_bitacora">
-
-<option
-*ngFor="let b of bitacoras"
-[value]="b.id_bitacora">
-
-{{b.id_bitacora}}
-
-</option>
+  </option>
 
 </select>
 
