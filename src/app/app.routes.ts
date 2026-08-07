@@ -18,11 +18,11 @@ export const routes: Routes = [
 
 {path:'usuarios', component:Usuarios},
 {path:'crearUsuario', component:CrearUsuario},
-{path:'editarUsuario', component:EditarUsuario},
+{path:'editarUsuario/', component:EditarUsuario},
 
 {path:'funcionario',component:Funcionarios },
 {path:'crearFuncionario',component:CrearFuncinario},
-{path:'editarFuncionario',component:EditarFuncionario},
+{path:'editarFuncionario/:id_funcionario',component:EditarFuncionario},
 
 {path:'ingreso', component:Ingreso},
 {path:'crear-ingreso', component:CrearIngreso},
