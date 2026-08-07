@@ -1,2 +1,87 @@
-<p>Crear Bitacora</p>
+<h2>Registrar Bitácora</h2>
 
+<form (ngSubmit)="guardarBitacora()">
+
+  <div>
+    <label>Operación</label><br>
+    <input
+      type="text"
+      name="operacion"
+      [(ngModel)]="nuevaBitacora.operacion"
+      required>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Tabla</label><br>
+    <input
+      type="text"
+      name="tabla"
+      [(ngModel)]="nuevaBitacora.tabla"
+      required>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Fecha</label><br>
+    <input
+      type="datetime-local"
+      name="fecha"
+      [(ngModel)]="nuevaBitacora.fecha"
+      required>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Sintaxis SQL</label><br>
+    <textarea
+      name="sintaxis_sql"
+      rows="4"
+      [(ngModel)]="nuevaBitacora.sintaxis_sql"
+      required>
+    </textarea>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Nombre SQL</label><br>
+    <input
+      type="text"
+      name="nombre_sql"
+      [(ngModel)]="nuevaBitacora.nombre_sql"
+      required>
+  </div>
+
+  <br>
+
+  <div>
+    <label>Usuario</label><br>
+
+    <select
+      name="id_usuario"
+      [(ngModel)]="nuevaBitacora.id_usuario"
+      required>
+
+      <option value="">Seleccione un usuario</option>
+
+      <option
+        *ngFor="let usuario of usuarios"
+        [value]="usuario.id_usuario">
+
+        {{usuario.id_usuario}}
+
+      </option>
+
+    </select>
+
+  </div>
+
+  <br>
+
+  <button type="submit">Guardar Bitácora </button>
+
+</form>

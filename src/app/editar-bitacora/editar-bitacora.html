@@ -1,1 +1,28 @@
-<p>Editar Bitacora </p>
+<h2>Actualizar Bitácora</h2>
+
+<form (ngSubmit)="actualizarBitacora()">
+
+  <label>Operación</label>
+
+  <input type="text" name="operacion" [(ngModel)]="bitacora.operacion">
+
+
+  <label>Tabla</label>
+
+  <input type="text" name="tabla" [(ngModel)]="bitacora.tabla" >
+  <label>Fecha</label>
+
+  <input type="text" name="fecha" [(ngModel)]="bitacora.fecha">
+  <label>Sintaxis SQL</label>
+
+  <input type="text" name="sintaxis_sql"  [(ngModel)]="bitacora.sintaxis_sql" >
+  <label>Nombre SQL</label>
+  <input type="text" name="nombre_sql"[(ngModel)]="bitacora.nombre_sql">
+
+  <label>ID Usuario</label>
+  <input type="text" name="id_usuario" [(ngModel)]="bitacora.id_usuario">
+
+  <br><br>
+  <button type="submit"> Actualizar</button>
+
+</form>

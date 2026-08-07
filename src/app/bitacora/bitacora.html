@@ -1,2 +1,53 @@
-<p>Listar Bitacora</p>
+<h2>LISTA DE BITÁCORA</h2>
 
+<table >
+
+  <thead>
+
+    <tr>
+      <th>ID</th>
+      <th>Operación</th>
+      <th>Tabla</th>
+      <th>Fecha</th>
+      <th>Sintaxis SQL</th>
+      <th>Nombre SQL</th>
+      <th>ID Usuario</th>
+      <th>Acciones</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let b of bitacora">
+
+      <td>{{ b.id_bitacora }}</td>
+
+      <td>{{ b.operacion }}</td>
+
+      <td>{{ b.tabla }}</td>
+
+      <td>{{ b.fecha }}</td>
+
+      <td>{{ b.sintaxis_sql }}</td>
+
+      <td>{{ b.nombre_sql }}</td>
+
+      <td>{{ b.id_usuario }}</td>
+
+      <td>
+
+        <button
+          (click)="eliminar(b.id_bitacora)">
+          Eliminar
+        </button>
+
+        <button  (click)="llevarActualizar (b.id_bitacora)">Actualizar </button>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>
