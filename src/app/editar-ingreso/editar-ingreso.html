@@ -1,1 +1,37 @@
-<p>editar-ingreso works!</p>
+<h2>Editar Ingreso</h2>
+
+<!-- ID del ingreso -->
+<label>ID Ingreso</label>
+<input type="number" [(ngModel)]="ingresoEditar.id_ingreso" name="id_ingreso" >
+
+<br><br>
+
+<!-- Fecha de ingreso -->
+<label>Fecha de ingreso</label>
+<input type="datetime-local" [(ngModel)]="ingresoEditar.fecha_ingreso" name="fecha_ingreso" placeholder="fecha de ingreso">
+
+<br><br>
+
+<!-- Fecha de salida -->
+<label>Fecha de salida</label>
+<input type="datetime-local" [(ngModel)]="ingresoEditar.fecha_salida" name="fecha_salida" placeholder="fecha de salida">
+
+<br><br>
+
+<!-- Estado -->
+<label>Estado</label>
+<input
+  type="text" [(ngModel)]="ingresoEditar.estado" name="estado" placeholder="escriba su estado">
+
+<br><br>
+
+<!-- ID Usuario -->
+<label>ID Usuario</label>
+<input type="text" [(ngModel)]="ingresoEditar.id_usuario" name="id_usuario" placeholder="escriba el id de su usuario">
+
+<br><br>
+
+<!-- Botón -->
+<button (click)="actualizarIngreso()">
+  Actualizar ingreso
+</button>

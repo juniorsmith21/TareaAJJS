@@ -1,32 +1,22 @@
 <label>Fecha ingreso</label>
 <input
-type="datetime-local"
-[(ngModel)]="nuevoIngreso.fecha_ingreso"
-name="fecha_ingreso">
+type="datetime-local" [(ngModel)]="nuevoIngreso.fecha_ingreso " name="fecha_ingreso">
 
 <br><br>
 
 <label>Fecha salida</label>
-<input
-type="datetime-local"
-[(ngModel)]="nuevoIngreso.fecha_salida"
-name="fecha_salida">
+<input type="datetime-local" [(ngModel)]="nuevoIngreso.fecha_salida" name="fecha_salida">
 
 <br><br>
 
 <label>Estado</label>
-<input
-type="text"
-[(ngModel)]="nuevoIngreso.estado"
-name="estado">
+<input type="text" [(ngModel)]="nuevoIngreso.estado" name="estado">
 
 <br><br>
 
 <label>Usuario</label>
 
-<select
-[(ngModel)]="nuevoIngreso.id_usuario"
-name="id_usuario">
+<select [(ngModel)]="nuevoIngreso.id_usuario" name="id_usuario">
 
   <option
   *ngFor="let u of usuarios"
@@ -40,6 +30,4 @@ name="id_usuario">
 
 <br><br>
 
-<button (click)="guardarIngreso()">
-Guardar
-</button>
+<button (click)="guardarIngreso()">Guardar</button>
