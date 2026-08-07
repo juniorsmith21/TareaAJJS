@@ -29,9 +29,9 @@ export const routes: Routes = [
 {path:'editar-ingreso', component:EditarIngreso},
 
 
-{path:'bitacora', component:Bitacora},
-{path:'editar-bitacora', component:EditarBitacora},
-{path:'crear-bitacora', component:CrearBitacora},
+    {path:'bitacora', component:Bitacora},
+  { path: 'editar-bitacora/:id_bitacora', component: EditarBitacora },
+    {path:'crear-bitacora', component:CrearBitacora},
 
 
 
