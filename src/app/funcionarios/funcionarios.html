@@ -1,1 +1,38 @@
-<p>funcionarios works! hola</p>
+<h1>LISTA FUNCIONARIOS</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID Funcionario</th>
+            <th>CI</th>
+            <th>Apellidos</th>
+            <th>Nombres</th>
+            <th>Tipo Funcionario</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Dirección</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let f of funcionario">
+            <td>{{f.id_funcionario}}</td>
+            <td>{{f.ci}}</td>
+            <td>{{f.apellidos}}</td>
+            <td>{{f.nombres}}</td>
+            <td>{{f.tipo_funcionario}}</td>
+            <td>{{f.telefono}}</td>
+            <td>{{f.correo}}</td>
+            <td>{{f.direccion}}</td>
+            <td>{{f.sexo}}</td>
+
+             <td>
+                <button (click)="eliminar(f.id_funcionario)">Eliminar</button>
+            </td>
+
+            <td>
+                <button (click)="llevarActualizar(f.id_funcionario)">Actualizar</button> </td>
+
+           
+        </tbody>

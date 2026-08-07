@@ -1,1 +1,25 @@
-<p>editar-funcionario works!</p>
+<h1>Actualizar Funcionarios</h1>
+
+<form (ngSubmit)="actualizarFuncionario()">
+
+    <input placeholder="Escribe id" name="id" [(ngModel)]="funcionario.id_funcionario">
+
+    <input placeholder="Escribe tu identificacion" name="ident" [(ngModel)]="funcionario.ci">
+
+    <input placeholder="Escribe tu apellido" name="ape" [(ngModel)]="funcionario.apellidos">
+
+    <input placeholder="Escribe tu nombre" name="nom" [(ngModel)]="funcionario.nombres">
+
+    <input placeholder="Tipo de funcionario" name="funcio" [(ngModel)]="funcionario.tipo_funcionario">
+
+    <input placeholder="Escribe tu telefono" name="tel" [(ngModel)]="funcionario.telefono">
+
+    <input placeholder="Escribe tu correo" name="corr" [(ngModel)]="funcionario.correo">
+
+    <input placeholder="Escribe tu direccion" name="dir" [(ngModel)]="funcionario.direccion">
+
+    <input placeholder="Escribe tu sexo" name="sex" [(ngModel)]="funcionario.sexo">
+
+    <button type="submit"> Actualizar </button>
+
+</form>
