@@ -1,33 +1,46 @@
-<label>Fecha ingreso</label>
-<input
-type="datetime-local" [(ngModel)]="nuevoIngreso.fecha_ingreso " name="fecha_ingreso">
+<div class="p-4 bg-gray-100 min-h-screen flex flex-col items-center">
+  <div class="w-full max-w-md bg-white rounded shadow overflow-hidden">
+    
+    <div class="bg-gradient-to-l from-gray-600 to-blue-500 text-white p-4 text-center">
+      <h1 class="text-xl font-bold uppercase tracking-wide">Crear Ingreso</h1>
+    </div>
+    
+    <div class="flex flex-col">
 
-<br><br>
+        <label  class="text-xs font-semibold text-gray-600 mb-1">Fecha ingreso</label>
+        <input type="datetime-local" [(ngModel)]="nuevoIngreso.fecha_ingreso " name="fecha_ingreso"  class="border border-gray-300 rounded p-2 text-sm focus:outline-none focus:border-blue-500 bg-gray-50">
+    </div>
 
-<label>Fecha salida</label>
-<input type="datetime-local" [(ngModel)]="nuevoIngreso.fecha_salida" name="fecha_salida">
+    <div class="flex flex-col">
+      <label  class="text-xs font-semibold text-gray-600 mb-1">Fecha salida</label>
+      <input type="datetime-local" [(ngModel)]="nuevoIngreso.fecha_salida" name="fecha_salida"  class="border border-gray-300 rounded p-2 text-sm focus:outline-none focus:border-blue-500 bg-gray-50">
+    </div>
 
-<br><br>
 
-<label>Estado</label>
-<input type="text" [(ngModel)]="nuevoIngreso.estado" name="estado">
+    <div class="flex flex-col">
+      <label class="text-xs font-semibold text-gray-600 mb-1">Estado</label>
+      <input type="text" [(ngModel)]="nuevoIngreso.estado" name="estado"  class="border border-gray-300 rounded p-2 text-sm focus:outline-none focus:border-blue-500 bg-gray-50">
+    </div>
+      
+    <div class="flex flex-col">
+      <label class="text-xs font-semibold text-gray-600 mb-1" >Usuario</label>
 
-<br><br>
+      <select [(ngModel)]="nuevoIngreso.id_usuario" name="id_usuario"  class="border border-gray-300 rounded p-2 text-sm focus:outline-none focus:border-blue-500 bg-gray-50">
 
-<label>Usuario</label>
+        <option
+        *ngFor="let u of usuarios" [value]="u.id_usuario">
 
-<select [(ngModel)]="nuevoIngreso.id_usuario" name="id_usuario">
+         {{u.id_usuario}}
 
-  <option
-  *ngFor="let u of usuarios"
-  [value]="u.id_usuario">
+        </option>
 
-    {{u.id_usuario}}
+      </select>
+      <br>
 
-  </option>
-
-</select>
-
-<br><br>
-
-<button (click)="guardarIngreso()">Guardar</button>
+     
+    </div>
+    <div class="flex  justify-center ">
+      <button (click)="guardarIngreso()" class="w-full bg-green-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm transition-colors shadow">Guardar</button>
+    </div>
+  </div>
+</div>

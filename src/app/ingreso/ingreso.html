@@ -2,32 +2,54 @@
 
 <table border="1">
 
-<tr>
-  <th>Id</th>
- 
-  <th style="width: 200px;">Fecha Ingreso</th>
-  
-  <th style="width: 200px;">Fecha Salida</th>
- 
- 
-  <th style="width: 200px;">Estado</th>
-  
-  <th style="width: 200px;">Usuario</th>
-  
-</tr>
+  <thead>
 
-<tr *ngFor = "let i of ingresos">
+    <tr>
+      <th>ID Ingreso</th>
+      <th>Fecha Ingreso</th>
+      <th>Fecha Salida</th>
+      <th>Estado</th>
+      <th>ID Usuario</th>
+      <th>Acciones</th>
+    </tr>
 
-  <td>{{i.id_ingreso}}</td>
+  </thead>
 
-  <td>{{i.fecha_ingreso}}</td>
- 
-  <td>{{i.fecha_salida}}</td>
+  <tbody>
 
-  <td>{{i.estado}}</td>
- 
-  <td >{{i.id_usuario}}</td>
+    <tr *ngFor="let ingreso of ingresos">
 
-</tr>
+      <td>
+        {{ ingreso.id_ingreso }}
+      </td>
+
+      <td>
+        {{ ingreso.fecha_ingreso }}
+      </td>
+
+      <td>
+        {{ ingreso.fecha_salida }}
+      </td>
+
+      <td>
+        {{ ingreso.estado }}
+      </td>
+
+      <td>
+        {{ ingreso.id_usuario }}
+      </td>
+
+      <td>
+
+        <button
+          (click)="eliminarIngreso(ingreso.id_ingreso)">
+          Eliminar
+        </button>
+
+      </td>
+
+    </tr>
+
+  </tbody>
 
 </table>
