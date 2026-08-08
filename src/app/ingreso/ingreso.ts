@@ -12,28 +12,74 @@ import { FormsModule } from '@angular/forms';
 })
 export class Ingreso {
 
-  ingresos:any[]=[];
+  ingresos: any[] = [];
 
-  constructor(private http:HttpClient){}
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.obtenerIngresos();
   }
 
-  obtenerIngresos(){
+  // GET - listar ingresos
+  obtenerIngresos() {
 
     this.http.get<any[]>(
       "https://srrpeanqjqfxtnuwhjez.supabase.co/rest/v1/ingreso?select=*",
       {
-        headers:{
-          Authorization:"Bearer sb_publishable_qnp1xzi89N_0c2Yex-wbwQ_ddmCG28x",
-          apikey:"sb_publishable_qnp1xzi89N_0c2Yex-wbwQ_ddmCG28x"
+        headers: {
+          Authorization: "Bearer sb_publishable_qnp1xzi89N_0c2Yex-wbwQ_ddmCG28x",
+          apikey: "sb_publishable_qnp1xzi89N_0c2Yex-wbwQ_ddmCG28x"
         }
       }
     ).subscribe({
-      next:(respuesta)=>{
-        this.ingresos=respuesta;
+      next: (respuesta) => {
+
+        console.log("respuesta del get", respuesta);
+
+        this.ingresos = respuesta;
+
+        console.log(this.ingresos);
+
+      },
+
+      error: (error) => {
+        console.log("Error al obtener ingresos:", error);
       }
+    });
+
+  }
+
+
+  // DELETE - eliminar ingreso
+  eliminarIngreso(id: number) {
+
+    this.http.delete(
+      "https://srrpeanqjqfxtnuwhjez.supabase.co/rest/v1/ingreso?id_ingreso=eq." + id,
+      {
+        headers: {
+          Authorization: "Bearer sb_publishable_qnp1xzi89N_0c2Yex-wbwQ_ddmCG28x",
+          apikey: "sb_publishable_qnp1xzi89N_0c2Yex-wbwQ_ddmCG28x"
+        }
+      }
+    ).subscribe({
+
+      next: () => {
+
+        alert("Ingreso eliminado correctamente");
+
+        // Volvemos a cargar la lista
+        this.obtenerIngresos();
+
+      },
+
+      error: (error) => {
+
+        console.log("Error al eliminar:", error);
+
+        alert("Error al eliminar el ingreso");
+
+      }
+
     });
 
   }
