@@ -18,7 +18,7 @@ export const routes: Routes = [
 
 {path:'usuarios', component:Usuarios},
 {path:'crearUsuario', component:CrearUsuario},
-{path:'editarUsuario/', component:EditarUsuario},
+{path:'editarUsuario', component:EditarUsuario},
 
 {path:'funcionario',component:Funcionarios },
 {path:'crearFuncionario',component:CrearFuncinario},
