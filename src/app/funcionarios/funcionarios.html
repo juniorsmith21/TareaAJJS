@@ -1,38 +1,49 @@
-<h1>LISTA FUNCIONARIOS</h1>
 
-<table>
-    <thead>
+<div class="p-4 bg-gray-100 min-h-screen">
+  <h1 class="text-xl font-bold mb-4 text-center">LISTA FUNCIONARIOS</h1>
+
+  
+  <div class="overflow-x-auto bg-white rounded shadow">
+    <table class="w-full text-sm text-left border-collapse">
+      <thead class="bg-gradient-to-l from-gray-600 to-blue-500 text-white">
         <tr>
-            <th>ID Funcionario</th>
-            <th>CI</th>
-            <th>Apellidos</th>
-            <th>Nombres</th>
-            <th>Tipo Funcionario</th>
-            <th>Teléfono</th>
-            <th>Correo</th>
-            <th>Dirección</th>
-            <th>Sexo</th>
+          <th class="p-3">ID</th>
+          <th class="p-3">CI</th>
+          <th class="p-3">Apellidos</th>
+          <th class="p-3">Nombres</th>
+          <th class="p-3">Tipo</th>
+          <th class="p-3">Teléfono</th>
+          <th class="p-3">Correo</th>
+          <th class="p-3">Dirección</th>
+          <th class="p-3">Sexo</th>
+          <th class="p-5 text-center" colspan="2">Acciones</th>
         </tr>
-    </thead>
+      </thead>
 
-    <tbody>
-        <tr *ngFor="let f of funcionario">
-            <td>{{f.id_funcionario}}</td>
-            <td>{{f.ci}}</td>
-            <td>{{f.apellidos}}</td>
-            <td>{{f.nombres}}</td>
-            <td>{{f.tipo_funcionario}}</td>
-            <td>{{f.telefono}}</td>
-            <td>{{f.correo}}</td>
-            <td>{{f.direccion}}</td>
-            <td>{{f.sexo}}</td>
+      <tbody>
+        <tr *ngFor="let f of funcionario" class="border-b hover:bg-gray-50">
+          <td class="p-3 font-semibold">{{f.id_funcionario}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.ci}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.apellidos}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.nombres}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.tipo_funcionario}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.telefono}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.correo}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.direccion}}</td>
+          <td class="p-3 whitespace-nowrap">{{f.sexo}}</td>
 
-             <td>
-                <button (click)="eliminar(f.id_funcionario)">Eliminar</button>
-            </td>
-
-            <td>
-                <button (click)="llevarActualizar(f.id_funcionario)">Actualizar</button> </td>
-
-           
-        </tbody>
+          <td class="p-2">
+            <button (click)="eliminar(f.id_funcionario)" class="bg-gray-500 text-white px-2 py-1 rounded text-xs">
+              Eliminar
+            </button>
+          </td>
+          <td class="p-2">
+            <button (click)="llevarActualizar(f.id_funcionario)" class="bg-green-500 text-white px-2 py-1 rounded text-xs">
+              Actualizar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
