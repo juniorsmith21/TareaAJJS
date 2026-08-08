@@ -1,41 +1,38 @@
-    <nav class=" w-full text-sm bg-gradient-to-l from-gray-600 to-blue-500 py-6 px-4">
+<nav class="w-full text-sm bg-gradient-to-l from-gray-600 to-blue-500 py-6 px-4">
 
-    
-    <button class="md:hidden text-white text-2xl mb-4"(click)="toggleMenu()">☰</button>
+  <button class="md:hidden text-white text-2xl mb-4" (click)="toggleMenu()">☰</button>
 
-    <div
-        class="flex flex-col md:flex-row flex-wrap gap-2"
-        [class.hidden]="!menuAbierto"
-        [class.md:flex]="true">
+  <div
+    class="flex flex-col md:flex-row flex-wrap gap-2"
+    [class.hidden]="!menuAbierto"
+    [class.md:flex]="true">
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/usuarios">  Lista Usuarios</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/usuarios"> Lista Usuarios</a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47 " routerLink="/crearUsuario"> Crear Usuario </a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/crearUsuario"> Crear Usuario </a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/editarUsuario">  Editar Usuario </a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/editarUsuario"> Editar Usuario </a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/funcionario">  Lista Funcionario</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/funcionario"> Lista Funcionario</a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/crearFuncionario"> Crear Funcionario</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/crearFuncionario"> Crear Funcionario</a>
 
-        <a class="boer border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/editarFuncionario/:id_funcionario"> Editar Funcionario</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/editarFuncionario/:id_funcionario"> Editar Funcionario</a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/ingreso">Ingreso</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/ingreso">Ingreso</a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47"routerLink="/crear-ingreso">Crear ingreso</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/crear-ingreso">Crear ingreso</a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47"routerLink="/editar-ingreso">Editar Ingreso</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/editar-ingreso">Editar Ingreso</a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47"routerLink="/bitacora">Bitácora </a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/bitacora">Bitácora </a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/editar-bitacora"> Editar Bitácora</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/editar-bitacora/:id"> Editar Bitácora</a>
 
-        <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/crear-bitacora">Crear Bitácora</a>
+    <a class="border border-gray-500 rounded bg-gray-500 shadow-xl py-2 px-1 w-47" routerLink="/crear-bitacora">Crear Bitácora</a>
 
-    </div>
+  </div>
 
-    </nav>
+</nav>
 
 <router-outlet></router-outlet>
-
-
