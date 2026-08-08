@@ -10,4 +10,12 @@ import { RouterLink } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('TrabajoTaiwild');
+  
+
+   menuAbierto = false;
+
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
+  }
+  
 }
